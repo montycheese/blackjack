@@ -67,6 +67,7 @@ public class Deck {
 			deck[secondRandomNum] = null;
 		}
 	}
+	/** deal player another card currently used hand object goes as parameter*/
 	public void hit(Hand aHand) {
 		int randomNum = (int)(Math.round(Math.random()*51));
 		if (deck[randomNum] == null)
