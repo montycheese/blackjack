@@ -1,4 +1,3 @@
-
 public class Card {
 	private String suit;
 	private String rank;
@@ -17,15 +16,14 @@ public class Card {
 		this.suit = null;
 		this.rank = null;
 	}
-	/** Create random card attributes with each new instance */
+	/** Create random card attributes with each new instance 
+	 * Unused method for blackjack*/
 	private void generateCard() {
-		
 		this.suit = allSuits[(int)Math.round(Math.random()*3)]; 
 		this.rank = allRanks[(int)Math.round(Math.random()*12 +1)];
 	}
 	public void setRank(String rank){
 		this.rank = rank;
-		
 	}
 	public void setSuit(String suit){
 		this.suit = suit;
@@ -71,6 +69,7 @@ public class Card {
 	public String getSuit(){
 		return this.suit;
 	}
+	/** unused method for blackjack */
 	public boolean isHigher(Card anotherCard) {
 		int rank1 = 0, rank2 = 0;
 		for (int x =0; x < this.allRanks.length; x++)
@@ -87,14 +86,13 @@ public class Card {
 		}
 		return (rank1 > rank2);
 	}
+	/** unused method for blackjack */
 	public boolean equals(Card anotherCard){
 		return (this.rank.equals(anotherCard.getRank())
-			&& this.suit.equals(anotherCard.getSuit())
-			);
-			
+				&& this.suit.equals(anotherCard.getSuit())
+				);
 	}
 	public String toString(){
 		return String.format("%s of %s'", this.rank, this.suit);
 	}
-	
 }
