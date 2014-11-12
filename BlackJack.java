@@ -1,7 +1,5 @@
 import java.util.Scanner;
 public class BlackJack {
-	public Hand hand;
-	public Deck deck;
 	
 	public static void main(String[] args) {
 		int score = 100; // implement this later
